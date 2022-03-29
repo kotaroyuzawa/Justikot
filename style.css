@@ -91,3 +91,277 @@ html {
 .fa-instagram-square {
   color: #c13584;
 }
+
+/*ABOUT*/
+.about__hero {
+  background-image: url("img/workshop2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  z-index: -2;
+}
+.about__hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.about__hero h1 {
+  color: #fff;
+  font-size: 50px;
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+
+  padding: 150px 10%;
+}
+
+.about__content {
+  display: flex;
+  margin: 10%;
+}
+
+.about__content img {
+  height: 300px;
+  margin: 0 5%;
+}
+
+.owner-name {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.about__content p {
+  font-size: 20px;
+  padding: 0 10%;
+  line-height: 30px;
+}
+
+/*reviews*/
+.user-reviews {
+  background-color: #efe7e4;
+  padding: 100px 10%;
+}
+.user-reviews-title {
+  text-align: center;
+  margin-bottom: 100px;
+  text-transform: uppercase;
+}
+
+.user-reviews {
+  padding: 150px 25%;
+}
+
+.review {
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3.5rem;
+  margin-bottom: 40px;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 56.25em) {
+  .review {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+.review__text {
+  text-align: center;
+  justify-content: center;
+}
+
+.review__user {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.review__photo {
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+.review__user-box small {
+  display: flex;
+  justify-content: center;
+}
+.review__user-name {
+  font-weight: 600;
+  margin-top: 5px 0px 0px 0px;
+  text-transform: uppercase;
+}
+
+/* product */
+.card-wrapper {
+  max-width: 1100px;
+  margin: 200px auto 0;
+}
+
+img {
+  width: 100%;
+
+  display: block;
+}
+
+.img-display {
+  overflow: hidden;
+}
+
+.img-showcase {
+  display: flex;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+.img-showcase img {
+  min-width: 100%;
+}
+
+.img-select {
+  display: flex;
+}
+
+.img-item {
+  margin: 0.3rem;
+}
+
+.img-item:nth-child(1),
+.img-imte:nth-child(2),
+.img-imte:nth-child(3) {
+  margin-right: 0;
+}
+
+.img-item:hover {
+  opacity: 0.8;
+}
+
+.product-content {
+  padding: 2rem 1rem;
+}
+
+.product-title {
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  position: relative;
+  color: #12263a;
+  margin: 1rem 0;
+}
+
+.product-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 80px;
+  background: #12263a;
+}
+
+.product-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  background: #256eff;
+  color: #fff;
+  padding-top: 0 0.3rem;
+  transition: all 0.5 ease;
+}
+
+.product-link:hover {
+  opacity: 0.9;
+}
+
+.product-rating {
+  color: #ffc107;
+}
+
+.product-rating span {
+  font-weight: 600;
+  color: #252525;
+}
+
+.product-price {
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.product-price span {
+  font-weight: 400;
+}
+.product-detail h2 {
+  text-transform: capitalize;
+  color: #12263a;
+  padding-bottom: 0.6rem;
+}
+
+.product-detail p {
+  font-size: 0.9rem;
+  padding-bottom: 0.3rem;
+  opacity: 0.8;
+}
+
+.product-detail ul {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.product-detail ul li {
+  margin: 0;
+  list-style: none;
+  padding-left: 1.7rem;
+  margin: 0.4rem 0;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.product-detail ul li span {
+  font-weight: 400;
+}
+
+@media screen and (min-width: 992px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+  }
+  .card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-imgs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .product-content {
+    padding-top: 0;
+  }
+}
