@@ -25,7 +25,6 @@ html {
   font-family: "Abril Fatface", "cursive";
   font-size: 30px;
   color: #e4bbbb;
-
   text-decoration: none;
 }
 
@@ -126,7 +125,6 @@ html {
 .about__container {
   display: flex;
   flex-direction: column;
-
   padding: 150px 10%;
 }
 
@@ -166,9 +164,6 @@ html {
 
 .user-reviews {
   padding: 150px 25%;
-}
-
-.review {
 }
 
 .review {
@@ -212,7 +207,7 @@ html {
   text-transform: uppercase;
 }
 
-/* product */
+/* Instruments */
 .card-wrapper {
   max-width: 1100px;
   margin: 200px auto 0;
@@ -220,7 +215,6 @@ html {
 
 img {
   width: 100%;
-
   display: block;
 }
 
@@ -293,15 +287,6 @@ img {
 
 .product-link:hover {
   opacity: 0.9;
-}
-
-.product-rating {
-  color: #ffc107;
-}
-
-.product-rating span {
-  font-weight: 600;
-  color: #252525;
 }
 
 .product-price {
