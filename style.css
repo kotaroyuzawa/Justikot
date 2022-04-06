@@ -17,8 +17,7 @@ html {
 }
 
 .nav .logo {
-  margin-left: 10%;
-  padding: 0 100px;
+  padding-left: 10%;
 }
 
 .nav .logo a {
@@ -31,7 +30,7 @@ html {
 .nav {
   background-color: #362222;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100px;
@@ -40,7 +39,9 @@ html {
 .nav__links {
   display: flex;
   list-style: none;
+  margin-bottom: 0;
 }
+
 .nav__links a {
   color: #b5bab8;
   padding: 0 20px;
@@ -48,13 +49,13 @@ html {
 }
 
 .nav__links a:hover {
-  opacity: 0.8;
+  filter: brightness(120%);
 }
 
 .nav__icons {
   display: flex;
   align-items: center;
-  margin-right: 10%;
+  padding-right: 10%;
   list-style: none;
 }
 
@@ -65,10 +66,10 @@ html {
   margin: 0 10px;
 }
 
-.icon {
+.icon__container .icon {
   font-size: 20px;
   margin: 0 10px;
-  color: #fff;
+  color: #b5bab8;
 }
 .icon:hover {
   filter: brightness(120%);
@@ -79,16 +80,8 @@ html {
   height: 1000px;
 }
 
-.fa-facebook {
-  color: #355af0;
-}
-
-.fa-google-plus {
-  color: #dd4b39;
-}
-
-.fa-instagram-square {
-  color: #c13584;
+.icon {
+  color: #423f3e;
 }
 
 /*ABOUT*/
@@ -130,12 +123,13 @@ html {
 
 .about__content {
   display: flex;
-  margin: 10%;
+  padding: 10%;
 }
 
-.about__content img {
-  height: 300px;
-  margin: 0 5%;
+.about__img {
+  width: 300%;
+  min-width: 300px;
+  height: auto;
 }
 
 .owner-name {
@@ -147,11 +141,11 @@ html {
 
 .about__content p {
   font-size: 20px;
-  padding: 0 10%;
   line-height: 30px;
+  padding: 0 10%;
 }
 
-/*reviews*/
+/*Reviews*/
 .user-reviews {
   background-color: #efe7e4;
   padding: 100px 10%;
@@ -208,145 +202,45 @@ html {
 }
 
 /* Instruments */
-.card-wrapper {
-  max-width: 1100px;
-  margin: 200px auto 0;
-}
-
-img {
-  width: 100%;
-  display: block;
-}
-
-.img-display {
-  overflow: hidden;
-}
-
-.img-showcase {
+#content-wrapper {
   display: flex;
-  width: 100%;
-  transition: all 0.5s ease;
-}
-.img-showcase img {
-  min-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10%;
 }
 
-.img-select {
+.column-left {
+}
+
+.column-right {
+  width: 500px;
+  padding: 50px;
+}
+.column-right h1 {
+  text-transform: capitalize;
+}
+.column-right h3 {
+  margin-bottom: 70px;
+}
+
+#featured1,
+#featured2,
+#featured3 {
+  border: 2px solid black;
+}
+
+.thumbnail1,
+.thumbnail2,
+.thumbnail3 {
+  max-width: 180px;
+  max-height: 100px;
+  cursor: pointer;
+  margin: 3px;
+  border: 2px solid black;
+}
+
+#slider {
+  width: 580px;
   display: flex;
-}
-
-.img-item {
-  margin: 0.3rem;
-}
-
-.img-item:nth-child(1),
-.img-imte:nth-child(2),
-.img-imte:nth-child(3) {
-  margin-right: 0;
-}
-
-.img-item:hover {
-  opacity: 0.8;
-}
-
-.product-content {
-  padding: 2rem 1rem;
-}
-
-.product-title {
-  font-size: 3rem;
-  text-transform: capitalize;
-  font-weight: 700;
-  position: relative;
-  color: #12263a;
-  margin: 1rem 0;
-}
-
-.product-title::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 4px;
-  width: 80px;
-  background: #12263a;
-}
-
-.product-link {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 0.9rem;
-  display: inline-block;
-  margin-bottom: 0.5rem;
-  background: #256eff;
-  color: #fff;
-  padding-top: 0 0.3rem;
-  transition: all 0.5 ease;
-}
-
-.product-link:hover {
-  opacity: 0.9;
-}
-
-.product-price {
-  margin: 1rem 0;
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.product-price span {
-  font-weight: 400;
-}
-.product-detail h2 {
-  text-transform: capitalize;
-  color: #12263a;
-  padding-bottom: 0.6rem;
-}
-
-.product-detail p {
-  font-size: 0.9rem;
-  padding-bottom: 0.3rem;
-  opacity: 0.8;
-}
-
-.product-detail ul {
-  margin: 1rem 0;
-  font-size: 0.9rem;
-}
-
-.product-detail ul li {
-  margin: 0;
-  list-style: none;
-  padding-left: 1.7rem;
-  margin: 0.4rem 0;
-  font-weight: 600;
-  opacity: 0.9;
-}
-
-.product-detail ul li span {
-  font-weight: 400;
-}
-
-@media screen and (min-width: 992px) {
-  .card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1.5rem;
-  }
-  .card-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .product-imgs {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .product-content {
-    padding-top: 0;
-  }
 }
