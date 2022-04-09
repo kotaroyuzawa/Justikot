@@ -2,6 +2,7 @@
   --navColor: #362222;
   --accentColor: #950101;
   --pColor: #423f3e;
+  --textFooter: #b5bab8;
 }
 
 * {
@@ -243,4 +244,23 @@ html {
 #slider {
   width: 580px;
   display: flex;
+}
+
+/* Footer */
+footer {
+  background-color: #362222;
+  height: 300px;
+}
+
+path, h5, p {
+  color: var(--textFooter);
+}
+
+footer p {
+  font-size: 13px;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
 }
