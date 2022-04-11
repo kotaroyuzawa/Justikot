@@ -1,8 +1,9 @@
 :root {
   --navColor: #362222;
   --accentColor: #950101;
-  --pColor: #423f3e;
-  --textFooter: #b5bab8;
+  --pColor: #292726;
+  --textFooter: #bdbfbf;
+  --bg: rgb(234, 234, 239);
 }
 
 * {
@@ -252,15 +253,32 @@ footer {
   height: 300px;
 }
 
-path, h5, p {
-  color: var(--textFooter);
+h5, p, h2 {
+  color:var(--pColor)
 }
 
 footer p {
   font-size: 13px;
+  color: var(--textFooter);
+}
+
+footer h5, path {
+  color: var(--textFooter);
 }
 
 .bi {
   vertical-align: -.125em;
   fill: currentColor;
 }
+
+/* Sections */
+.my-bg-gray {
+  background-color: var(--bg)
+}
+
+.my-photo:hover {
+  transform: scale(1.10) translateY(-0.5rem);
+  /* outline: 0.2rem solid #e4bbbb; */
+}
+
+/* Gallery */
