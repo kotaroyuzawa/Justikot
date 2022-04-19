@@ -37,3 +37,40 @@ for (let i = 0; i < thumbnails3.length; i++) {
     document.getElementById("featured3").src = this.src;
   });
 }
+
+/*Modal*/
+const modal = document.querySelector(".gallery-modal");
+const btnCloseModal = document.querySelector(".gallery-close");
+const imgsOpenModal = document.querySelectorAll(".gallery-img");
+const modalImg = document.querySelector(".gallery-modal-content");
+const galleryTexts = document.querySelectorAll(".gallery-modal-text");
+
+for (let i = 0; i < imgsOpenModal.length; i++) {
+  imgsOpenModal[i].addEventListener("click", function () {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    const targetText =
+      this.nextElementSibling.firstChild.nextElementSibling.innerText;
+    const modalText = document.querySelector(".gallery-modal-text");
+    modalText.innerHTML = targetText;
+  });
+}
+
+// When the user clicks on <span> (x) or outside the image, close the modal
+const closeModal = function () {
+  modal.style.display = "none";
+};
+
+btnCloseModal.addEventListener("click", closeModal);
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    closeModal();
+  }
+};
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && modal.style.display === "block") {
+    closeModal();
+  }
+});
