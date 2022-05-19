@@ -5,9 +5,9 @@
   --textFooter: #bdbfbf;
   --bg: rgba(234, 234, 239, 0.29);
 
-  --titleFont: 'IBM Plex Serif', serif;
+  --titleFont: "IBM Plex Serif", serif;
   --titleFontSize: 48px;
-  --fontDescription: 'Lato', sans-serif;
+  --fontDescription: "Lato", sans-serif;
   --fontDescriptionSize: 20px;
   --fontDescriptionNormalSize: 18px;
   --fontDescriptionSmallSize: 15px;
@@ -20,19 +20,21 @@
   box-sizing: inherit;
 }
 
-html {
+html,
+body {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-.header {}
+.header {
+}
 
 /*NAV*/
 .nav .logo {
-  padding-left: 10%;
 }
 
 .nav .logo a {
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-size: 30px;
   color: #e4bbbb;
   text-decoration: none;
@@ -77,7 +79,7 @@ html {
 }
 
 .logo-font {
-  font-family: 'Baloo 2';
+  font-family: "Baloo 2";
   font-size: 30px;
   color: #e4bbbb;
   text-decoration: none;
@@ -117,6 +119,14 @@ html {
 }
 
 @media only screen and (max-width: 1170px) {
+  .logo-font {
+    font-family: "Baloo 2";
+    font-size: 30px;
+    color: #e4bbbb;
+    text-decoration: none;
+    padding-left: 0;
+    text-transform: lowercase;
+  }
   .nav__icons {
     display: none;
   }
